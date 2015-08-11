@@ -1,0 +1,22 @@
+<div class="running-challenge">
+  <h1>
+    Take the<br/>
+    1 minute running<br/>
+    challenge
+  </h1>
+  <div>
+    <div id="slide-logo" class="logo"></div>
+    <a id="slide-try-button" class="try-button" fullpage-move-to="{ selector: '.slides', index: 6 }" ng-show="showTryButton">
+      Try this app
+      <i class="fa fa-android"></i>
+      <i class="fa fa-apple"></i>
+    </a>
+
+    <div id="slide-clock" class="clock" ng-hide="hideClock" ng-controller="ClockCtrl">
+      <div class="center" ng-hide="done"></div>
+      <div class="second" ng-hide="done"></div>
+      <div class="done" ng-hide="!done"></div>
+    </div>
+  </div>
+  <div class="scroll-down" fullpage-section-down="'.slides'"><i class="fa fa-arrow-down"></i></div>
+</div>

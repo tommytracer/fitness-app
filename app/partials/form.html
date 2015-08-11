@@ -1,0 +1,113 @@
+<div class="form" ng-controller="FormCtrl">
+  <div class="content-android">
+    <div class="mobile-form">
+      <form ng-submit="submit()" data-toggle="validator">
+        <div class="app-group" required="true" ng-if="slideCount===0" ng-click="showNextClick()">
+          <div class="sign-up">Sign up for early access.</div>
+          <label for="platform">Please choose your application platform</label>
+          <label class="radio-button" ng-model="model.platform" btn-radio="'android'"><i class="fa fa-android"></i></label>
+          <label class="radio-button" ng-model="model.platform" btn-radio="'ios'"><i class="fa fa-apple"></i></label>
+        </div>
+        <div class="email-group" required="true" ng-if="slideCount===1">
+          <label for="email" ng-if="!model.platform">Choose your application platform first *</label>
+          <label for="email" ng-if="model.platform === 'android'">Google play account email *</label>
+          <label for="email" ng-if="model.platform === 'ios'">Email account *</label>
+          <input type="email" placeholder="Enter your email" id="email" name="name" ng-model="model.email" required />
+        </div>
+        <div class="form-group" required="true" ng-if="slideCount===1" ng-click="showNextClick()">
+          <label for="gender" ng-class="{'form-error' : genderState == 'fail'}">Gender * {{requiredGender}}</label>
+          <label class="radio-button" ng-model="model.gender" btn-radio="'female'" ng-click="resetGender()">Female</label>
+          <label class="radio-button" ng-model="model.gender" btn-radio="'male'" ng-click="resetGender()">Male</label>
+        </div>
+        <div class="age-group" required="true" ng-if="slideCount===2" ng-click="showNextClick()">
+          <label for="ageGroup" ng-class="{'form-error' : ageState == 'fail'}">Age group * {{requiredAge}}</label>
+          <div class="radios">
+            <label class="radio-button" ng-model="model.ageGroup" btn-radio="'<20'" ng-click="resetAge()">&lt;20</label>
+            <label class="radio-button" ng-model="model.ageGroup" btn-radio="'20-29'" ng-click="resetAge()">20-29</label>
+            <label class="radio-button" ng-model="model.ageGroup" btn-radio="'30-39'" ng-click="resetAge()">30-39</label>
+            <label class="radio-button" ng-model="model.ageGroup" btn-radio="'40-49'" ng-click="resetAge()">40-49</label>
+            <label class="radio-button" ng-model="model.ageGroup" btn-radio="'50+'" ng-click="resetAge()">50+</label>
+          </div>
+        </div>
+        <div class="habit-group" required="true" ng-if="slideCount===3">
+          <label for="habitGroup" ng-class="{'form-error' : describeState == 'fail'}">Which ones describe you? * {{requiredDescribe}}</label>
+          <label class="checkbox-button" ng-model="model.habitGroup.iDontRun" btn-checkbox ng-click="resetDescribe()">I don't run</label>
+          <label class="checkbox-button" ng-model="model.habitGroup.iHateRunning" btn-checkbox ng-click="resetDescribe()">I hate running</label>
+          <label class="checkbox-button" ng-model="model.habitGroup.iWalkRegularly" btn-checkbox ng-click="resetDescribe()">I walk regularly</label>
+          <label class="checkbox-button" ng-model="model.habitGroup.iRunRegularly" btn-checkbox ng-click="resetDescribe()">I run regularly</label>
+          <label class="checkbox-button" ng-model="model.habitGroup.iLikeRunningEvents" btn-checkbox ng-click="resetDescribe()">I like doing<br/>running events</label>
+          <label class="checkbox-button" ng-model="model.habitGroup.iTriedRunningButGaveUp" btn-checkbox ng-click="resetDescribe()">I tried running<br/>but gave up</label>
+          <label class="checkbox-button" ng-model="model.habitGroup.imTrainingForAnEvent" btn-checkbox ng-click="resetDescribe()">I'm training<br/>for an event</label>
+          <label class="checkbox-button" ng-model="model.habitGroup.imReturningFromAnInjury" btn-checkbox ng-click="resetDescribe()">I'm returning<br/>from an injury</label>
+          <div class="privacy-notice">
+            <p>**By clicking "Sign me Up" you are agreeing to our <a href="http://---------------/privacy" target="_blank"> Privacy Policy</a></p>
+          </div>
+          <button type="submit">{{emailButtonText}}</button>
+          <br>
+          <div class="required-text">* Required fields</div>
+        </div>
+      </form>
+    </div>
+
+    <div class="desktop-form-wrapper">
+      <div class="app-icons">
+        <i class="fa fa-android"></i>
+        <i class="fa fa-apple"></i>
+      </div>
+      <div class="sign-up">Sign up for early access.</div>
+      <div class="desktop-form">
+        <form ng-submit="submit()" data-toggle="validator">
+          <div class="app-group" required="true">
+            <label for="platform">Please choose your application platform *</label>
+            <label class="radio-button" ng-model="model.platform" btn-radio="'android'"><i class="fa fa-android"></i></label>
+            <label class="radio-button" ng-model="model.platform" btn-radio="'ios'"><i class="fa fa-apple"></i></label>
+          </div>
+          <br>
+          <br>
+          <div class="email-group" required="true">
+            <label for="email" ng-if="!model.platform">Choose your application platform first *</label>
+            <label for="email" ng-if="model.platform === 'android'">Google play account email*</label>
+            <label for="email" ng-if="model.platform === 'ios'">Email account*</label>
+            <input type="email" placeholder="Enter your email" id="email" name="name" ng-model="model.email" required />
+          </div>
+          <div class="form-group" required="true">
+            <label for="gender" ng-class="{'form-error' : genderState == 'fail'}">Gender * {{requiredGender}}</label>
+            <label class="radio-button" ng-model="model.gender" btn-radio="'female'" ng-click="resetGender()">Female</label>
+            <label class="radio-button" ng-model="model.gender" btn-radio="'male'" ng-click="resetGender()">Male</label>
+          </div>
+          <div class="age-group" required="true">
+            <label for="ageGroup" ng-class="{'form-error' : ageState == 'fail'}">Age group * {{requiredAge}}</label>
+            <div class="radios">
+              <label class="radio-button" ng-model="model.ageGroup" btn-radio="'<20'" ng-click="resetAge()">&lt;20</label>
+              <label class="radio-button" ng-model="model.ageGroup" btn-radio="'20-29'" ng-click="resetAge()">20-29</label>
+              <label class="radio-button" ng-model="model.ageGroup" btn-radio="'30-39'" ng-click="resetAge()">30-39</label>
+              <label class="radio-button" ng-model="model.ageGroup" btn-radio="'40-49'" ng-click="resetAge()">40-49</label>
+              <label class="radio-button" ng-model="model.ageGroup" btn-radio="'50+'" ng-click="resetAge()">50+</label>
+            </div>
+          </div>
+          <div class="habit-group" required="true">
+            <label for="habitGroup" ng-class="{'form-error' : describeState == 'fail'}">Which ones describe you? * {{requiredDescribe}}</label>
+            <label class="checkbox-button" ng-model="model.habitGroup.iDontRun" btn-checkbox ng-click="resetDescribe()">I don't run</label>
+            <label class="checkbox-button" ng-model="model.habitGroup.iHateRunning" btn-checkbox ng-click="resetDescribe()">I hate running</label>
+            <label class="checkbox-button" ng-model="model.habitGroup.iWalkRegularly" btn-checkbox ng-click="resetDescribe()">I walk regularly</label>
+            <label class="checkbox-button" ng-model="model.habitGroup.iRunRegularly" btn-checkbox ng-click="resetDescribe()">I run regularly</label>
+            <label class="checkbox-button" ng-model="model.habitGroup.iLikeRunningEvents" btn-checkbox ng-click="resetDescribe()">I like doing<br/>running events</label>
+            <label class="checkbox-button" ng-model="model.habitGroup.iTriedRunningButGaveUp" btn-checkbox ng-click="resetDescribe()">I tried running<br/>but gave up</label>
+            <label class="checkbox-button" ng-model="model.habitGroup.imTrainingForAnEvent" btn-checkbox ng-click="resetDescribe()">I'm training<br/>for an event</label>
+            <label class="checkbox-button" ng-model="model.habitGroup.imReturningFromAnInjury" btn-checkbox ng-click="resetDescribe()">I'm returning<br/>from an injury</label>
+          </div>
+          <div class="privacy-notice">
+            <p>**By clicking "Sign me Up" you are agreeing to our <a href="http://---------------/privacy" target="_blank"> Privacy Policy</a></p>
+          </div>
+          <button type="submit">{{emailButtonText}}</button>
+          <br>
+          <div class="required-text">* Required fields</div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="form-nav-wrapper">
+    <span class="form-nav form-nav-prev" ng-click="prevClick()" ng-if="slideCount != 0"><i class="fa  fa-arrow-left"></i> previous </span>
+    <span class="form-nav form-nav-next"  ng-click="nextClick()" ng-if="showNextBtn && (slideCount != slideList.length-2)"> next <i class="fa fa-arrow-right"></i></span>
+  </div>
+</div>

@@ -1,0 +1,628 @@
+// Bootstrap
+@import (once) "../../bower_components/bootstrap/less/bootstrap.less";
+
+// Open Sans
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600,700);
+
+// -- Tags --
+
+html {
+  height: 100%;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 0;
+}
+
+body {
+  height: 100%;
+}
+
+// -- Bootstrap --
+
+.normalize-button() {
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:hover, &.active {
+    background: @text-color;
+    border-color: @text-color;
+    box-shadow: none;
+    color:@color-purple;
+  }
+}
+
+.btn {
+  border-width: 2px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.btn-default {
+  .normalize-button();
+  background: transparent;
+  border-color: @text-color;
+  color: @text-color;
+}
+
+.btn-primary {
+  .normalize-button();
+  border-color: @color-purple;
+  background-color: @color-purple;
+}
+
+.btn-lg {
+  border-width: 3px;
+  border-radius: 10px;
+}
+
+// -- Logo --
+
+.logo {
+  .size(200px, 89px);
+  background: url("../img/logo-lg.png") 0 0 no-repeat;
+  content: "";
+  position: fixed;
+  top: 30px;
+  left: 10%;
+  //margin-left: -480px;
+  z-index: 9999;
+  background-size: 50% 50%;
+}
+
+// -- Try button --
+
+.try-button {
+  color: @text-color;
+  .clearfix();
+  position: fixed;
+  right: 10%;
+  //left: 50%;
+  top: 22px;
+  width: 172px;
+  //margin-left: 300px;
+  z-index: 9999;
+  font-weight: 200;
+  font-size: 14px;
+  padding: 11px 0 9px 10px;
+
+  &:hover {
+    cursor: pointer;
+    color:@brand-primary;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 1px solid #fff;
+  }
+
+  .fa {
+    margin-left: 10px;
+    margin-right: 5px;
+    font-size: 26px;
+    vertical-align: middle;
+    margin-top: -5px;
+  }
+}
+
+// -- Clock --
+
+.clock {
+
+  @-webkit-keyframes bounce {
+    0% { transform: scale(1.0);}
+    50% { transform: scale(1.1); }
+    60% { transform: scale(1.0); }
+    80% { transform: scale(1.1) }
+    100% { transform: scale(1.0) }
+  }
+
+  @clock-size: 140px;
+  .square(@clock-size);
+  background: transparent;
+  box-sizing: border-box;
+  border-radius: 100%;
+  border: 3px solid @text-color;
+  position: fixed;
+  top: 120px;
+  right: 10.5%;
+  /*margin-left: 400px;*/
+  z-index: 9999;
+
+  .done {
+    .square(@clock-size);
+    background: url("../img/1minover.png") 0 0 no-repeat;
+    content: "";
+    display: hidden;
+    position: absolute;
+    top: -3px;
+    z-index: 10000;
+    animation: none;
+    background-size: 140px 140px;
+  }
+
+  .second {
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: spinAround 60s 1 linear;
+
+    &:before {
+      position: absolute;
+      content: "";
+      background: @text-color;
+      height: 54px;
+      width: 2px;
+      top: 10px;
+    }
+  }
+
+  .center {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border: 3px solid @text-color;
+    border-radius: 100%;
+    background: transparent;
+    margin: -5px 0 0 -5px;
+    top: 50%;
+    left: 50%;
+  }
+
+  -webkit-animation: bounce 1s;
+  -webkit-animation-iteration-count: 6;
+  -webkit-animation-delay: 60s;
+}
+
+.scroll-down {
+  cursor: pointer;
+  font-size: 36px;
+  padding: 40px;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+// -- Deck --
+
+.slides {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  .heading {
+    line-height: 110%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    width: 100%;
+
+    > small {
+      color: inherit;
+      line-height: 100%;
+    }
+  }
+
+  h1 {
+    .heading;
+    font-weight: 600;
+    font-size: 140px;
+  }
+
+  h2 {
+    .heading;
+    font-size: 80px;
+    font-weight: 600;
+    margin-top: -40px;
+  }
+
+  h3 {
+    .heading;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: -20px;
+  }
+}
+
+.hey-do-you {
+  .slide;
+  background: @color-purple;
+
+  h1 {
+    margin-top: -250px;
+
+  }
+}
+
+.running-challenge {
+  .slide;
+  background: @color-purple;
+
+  h1 {
+    margin-top: -250px;
+  }
+}
+
+.go-out {
+  .slide;
+}
+
+.do-a-little {
+  .slide;
+
+  h3 {
+    font-size: 60px;
+    margin-top: 80px;
+  }
+}
+
+.as-little-as {
+  .slide;
+
+  h2 {
+    margin-top: -100px;
+  }
+}
+
+.increase-the-amount {
+  .slide;
+
+  .chart {
+    .size(500px, 192px);
+    background: url("../img/chart.png") 0 0 no-repeat;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -180px 0 0 -250px;
+  }
+
+  h3 {
+    font-size: 60px;
+    margin-top: 80px;
+  }
+}
+
+.form {
+  background: @color-purple;
+  min-height: 100vh;
+
+  .desktop-form-wrapper {
+    margin: auto;
+    text-align: center;
+    width: 760px;
+  }
+
+  .desktop-form {
+    text-align: center;
+    padding: 40px 15px 80px 25px;
+    border-radius: 35px 35px 35px 35px;
+    -moz-border-radius: 35px 35px 35px 35px;
+    -webkit-border-radius: 35px 35px 35px 35px;
+    background-color: @light-color-purple;
+  }
+
+  .platform-logo {
+    font-size: 60px;
+    line-height: 100%;
+    margin: 40px auto;
+  }
+
+  .app-icons {
+    display:inline-block;
+    margin-top: 68px;
+    margin-bottom: 10px;
+
+    .fa {
+      margin-left: 15px;
+      margin-right: 15px;
+      font-size: 630%;
+    }
+  }
+
+  .sign-up {
+    margin-top: 66px;
+    margin-bottom: 75px;
+    font-size: 35px;
+    font-weight: 400;
+  }
+
+  .content {
+    padding: 40px 15px 80px 25px;
+    margin: auto;
+
+  }
+
+  .content-android {
+    .content;
+  }
+
+  .content-ios {
+    .content;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  form {
+    text-align: left;
+  }
+
+  .form-group {
+    margin-bottom: 80px;
+  }
+
+
+  label {
+    display: block;
+    font-size: 22px;
+    font-weight: 200;
+    margin-bottom: 15px;
+  }
+
+  input {
+    .form-control;
+    background: @color-purple;
+    border: none;
+    color: @text-color;
+    font-size: 30px;
+    font-weight: 200;
+    height: 80px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .radio-button,
+  .checkbox-button {
+    .btn;
+    .btn-lg;
+    .btn-primary;
+    font-weight: 200;
+    font-size: 28px;
+    min-width: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+
+  .email-group {
+    .form-group;
+  }
+
+  .gender-group {
+    .form-group;
+
+    .radio-button {
+      width: 180px;
+    }
+  }
+
+  .age-group {
+    .form-group;
+
+    .radio-button {
+      width: 129px;
+    }
+  }
+
+  button[type=submit] {
+    display: inline-block;
+    width: 80%;
+    padding: 10px;
+    font-size: 26px;
+  }
+
+  .habit-group {
+    .form-group;
+    margin-bottom: 40px;
+
+    .checkbox-button {
+      display: inline-block;
+      width: 47.5%;
+      max-height: 200px;
+      margin-bottom: 15px;
+    }
+
+    .form-nav-wrapper {
+      display: none;
+    }
+  }
+
+  .privacy-notice {
+
+    a:link {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+
+    a:visited {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+  }
+
+  button[type=submit] {
+    .btn;
+    .btn-lg;
+    .btn-default;
+    box-sizing: border-box;
+    font-size: 36px;
+    display: block;
+    padding: 20px;
+    width: 98%;
+  }
+
+  .form-error {
+    color: @color-red;
+  }
+
+  .required-text {
+    font-size: 20px;
+    font-weight: 200;
+  }
+
+  .form-nav-wrapper {
+    display: none;
+  }
+
+  .form-nav {
+    font-size: 200%;
+    padding: 10px;
+  }
+}
+
+.thanks {
+  background: @color-teal;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  .texts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -500px;
+    text-align: left;
+  }
+
+  .thank-you {
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  .instructions {
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
+
+.confirm-wrap  {
+  background: @color-teal;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  .texts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -500px;
+    text-align: left;
+  }
+
+  .confirm-title {
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  .confirm-body {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .confirm-signiture {
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+// -- Placeholder --
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:@text-color !important;
+    opacity: 0.8;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:@text-color !important;
+   opacity: 0.8;
+}
+:-ms-input-placeholder {
+   color:@text-color !important;
+   opacity: 0.8;
+}
+
+// -- Video --
+
+.video {
+  background: #222;
+  background-size: cover;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+.bg-photo {
+  background: #222;
+  background: url(../img/vid_still.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  background-size: cover;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -110;
+  display: none;
+}
+
+.browsehappy {
+  color: #000000;
+}
+
+// -- Angular --
+
+.ng-hide-remove {
+  animation: fadeIn .3s ease;
+}
+
+// -- Animations --
+
+@keyframes spinAround {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Fitness Website": {
+            "applicationId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", 
+            "masterKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        }, 
+        "_default": {
+            "link": "Fitness Website"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.4"
+    }
+}

@@ -1,0 +1,11 @@
+<div class="deck">
+  <div class="slides" fullpage="fullpageOptions">
+    <div ng-repeat="view in slides" ng-include="view" class="section"></div>
+  </div>
+  <video loop class="video">
+    <source src="vid/running.webm" type="video/webm">
+    <source src="vid/running.mp4" type="video/mp4">
+  </video>
+  <div class="bg-photo" ng-if="deck.showPhoto"></div>
+</div>
+

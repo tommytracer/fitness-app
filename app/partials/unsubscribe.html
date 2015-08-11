@@ -1,0 +1,21 @@
+<div class="confirm-wrap">
+    <div class="texts">
+        <p class="confirm-title" ng-if="confirmed === 'loading'">
+            Unsubscribing, please wait...
+        </p>
+        <div ng-if="confirmed === 'success'">
+            <p class="confirm-title">
+                You have been unsubscribed
+
+            </p>
+            <p class="confirm-signiture">
+                Thank you,
+                <br>
+                The fitness team
+            </p>
+        </div>
+        <p class="confirm-title" ng-if="confirmed === 'fail'">
+            We're sorry but an errror occured.
+        </p>
+    </div>
+</div>

@@ -1,0 +1,109 @@
+html {
+    background-color: #474747;
+    font-family: helvetica, arial, sans-serif;
+}
+
+body {
+    margin: 0px;
+    -webkit-overflow-scrolling: touch;
+}
+
+img {
+    border:none;
+    outline: none;
+}
+
+#wrap {
+}
+
+.content_window {
+    overflow: auto;
+    -ms-overflow-x: auto; /* IE8 */
+    overflow-x: auto;
+}
+#content-wrapper {
+    position: relative;
+}
+
+#content {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+#info-detail {
+    color: #fff;
+    font-size: .8em;
+    position:absolute;
+    display: none;
+}
+
+#info-detail li {
+
+    padding: 0;
+    list-style: none;
+    top: 0;
+}
+
+.info-detail-group {
+    width: 120px;
+}
+
+#progress-icon {
+    width: 62px;
+    height: 61px;
+    background: url('../img/spritesheet.png') no-repeat -106px 0;
+    transform: translate(-16px, -23px) scale(.4);
+    -webkit-transform: translate(-16px, -23px) scale(.4);
+}
+
+#walking-icon {
+    margin-left: 4px;
+    width: 40px;
+    height: 61px;
+    background: url('../img/spritesheet.png') no-repeat -67px 0;
+    transform:scale(.4);
+    transform: translate(5px, -23px) scale(.4);
+    -webkit-transform: translate(5px, -23px) scale(.4);
+}
+
+#distance-icon
+{
+    margin-left: 4px;
+    width: 67px;
+    height: 24px;
+    background: url('../img/spritesheet.png') no-repeat 0 0;
+    transform:scale(.4);
+    transform: translate(0, -4px) scale(.4);
+    -webkit-transform: translate(0, -4px) scale(.4);
+}
+
+#progress-time {
+    margin-left: -28px;
+}
+
+#walking-time {
+    margin-left: 0;
+}
+
+#distance {
+    margin-left: -10px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-clear {
+    clear: both;
+}
+
+.g_main {
+    pointer-events: all;
+}

@@ -1,0 +1,26 @@
+<div class="confirm-wrap">
+    <div class="texts">
+        <p class="confirm-title" ng-if="confirmed === 'loading'">
+            Checking, please wait...
+        </p>
+        <div ng-if="confirmed === 'success'">
+            <p class="confirm-title">
+                Thanks for verifying your email.
+
+            </p>
+            <p class="confirm-body">
+                We’re super excited for you to try our app.<br>
+                We will send you an email when the app is ready.
+            </p>
+            <p class="confirm-signiture">
+                Thank you,
+                <br>
+                The fitness team
+            </p>
+        </div>
+        <p class="confirm-title" ng-if="confirmed === 'fail'">
+            We're sorry but we could not verify your email<br/>
+            You can try again by reloading your page<br>or re-registering.
+        </p>
+    </div>
+</div>

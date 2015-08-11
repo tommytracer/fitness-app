@@ -1,0 +1,398 @@
+.mobile-form {
+  display: none;
+}
+
+@media (min-device-width : 200px) and (max-device-width : 1030px) {
+  .logo {
+    top: 75px;
+    right: 1%;
+    margin-left: -45%;
+    background-size: 60% 60%;
+  }
+
+  .scroll-down {
+    padding: 2px;
+  }
+
+  .fa-arrow-down {
+    margin-bottom: 40px;
+  }
+
+  .try-button {
+    right: 0;
+    left: 6%;
+    top: 20px;
+    margin-left: 0;
+    font-size: 14px;
+    width: 180px;
+  }
+
+  .clock {
+    top: 20px;
+    right: 6%;
+    width: 80px;
+    height: 80px;
+  }
+  .clock .done {
+    background-size: 80px 80px;
+  }
+
+  .clock .second {
+    &:before {
+      height: 23px;
+    }
+  }
+
+  .hey-do-you h1 {
+    font-size: 50px;
+    margin-top: -40px;
+  }
+
+  .running-challenge h1 {
+    font-size: 50px;
+    margin-top: -40px;
+    top: 40%;
+  }
+
+  .go-out h2 {
+    font-size: 50px;
+  }
+
+
+  .do-a-little h2 {
+    font-size: 44px;
+  }
+
+  .as-little-as h2 {
+    font-size: 50px;
+  }
+
+  .increase-the-amount h3 {
+    font-size: 40px;
+    margin-top: -50px;
+
+  }
+  .increase-the-amount .chart {
+    top: 44%;
+    background-size: 60% 60%;
+    margin-left: -155px;
+  }
+
+  .video {
+    display: none;
+  }
+
+  .bg-photo {
+   display: inline-block;
+  }
+
+  .form {
+    form {
+      text-align: center;
+    }
+
+    .content-android {
+      width: 100%;
+      border: none;
+      padding-top: 10px;
+    }
+
+    h2 {
+      text-align: left;
+      font-size: 29px;
+      margin-top: 0;
+      margin-left: 10px;
+      margin-bottom: 30px;
+    }
+
+    .sign-up {
+      margin-top: 20px;
+      margin-bottom: 60px;
+    }
+
+    .radio-button {
+      background-color: @mobile-btn-purple;
+      border-color: @mobile-btn-purple;
+      margin-left: 10px;
+      margin-bottom: 15px;
+
+      .checkbox-button.active {
+        background: #ffffff;
+        /*border-color: #ffffff;*/
+        box-shadow: none;
+        color: #9362fa;
+      }
+    }
+
+    input {
+      width: 94%;
+      margin-left: 10px;
+      height: 45px;
+      background-color: @mobile-btn-purple;
+    }
+
+    .required-text {
+      font-size: 18px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+
+    label {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+
+    .form-nav-wrapper {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 350px;
+      display: inline-block;
+    }
+
+    .form-nav-prev {
+      float: left;
+    }
+
+    .form-nav-next {
+      float: right;
+    }
+
+    .content {
+      width: 90%;
+    }
+
+    .habit-group {
+      margin-top: 5px;
+      .checkbox-button {
+        width: 42%;
+        font-size: 15px;
+        font-weight: 600;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        background-color: @mobile-btn-purple;
+      }
+
+      .checkbox-button.active {
+        background: #ffffff;
+        border-color: #ffffff;
+        box-shadow: none;
+        color: #9362fa;
+      }
+    }
+
+    .email-group {
+      margin-top: 100px;
+    }
+
+    .form-group {
+      margin-top: 100px;
+    }
+
+    .age-group {
+      margin-top: 100px;
+    }
+
+    button[type=submit] {
+      display: inline-block;
+      width: 80%;
+      font-size: 20px;
+      padding: 10px;
+    }
+
+  }
+
+  #index-logo {
+    display: none;
+  }
+
+  #index-try-button {
+    display: none;
+  }
+
+  #index-clock {
+    display: none;
+  }
+
+  #slide-logo {
+    display: block;
+  }
+
+  #slide-try-button {
+    display: block;
+  }
+
+  #slide-clock {
+    display: block;
+  }
+
+  .thanks .texts {
+    margin-left: -170px;
+    top: 28%;
+  }
+
+  .thanks .thank-you {
+    font-size: 30px;
+  }
+
+  .thanks .instructions {
+    font-size: 20px;
+  }
+
+  .confirm-wrap .texts {
+    margin-left: -170px;
+    top: 28%;
+  }
+
+  .confirm-wrap .confirm-title {
+    font-size: 30px;
+  }
+
+  .mobile-form {
+    display: block;
+  }
+
+  .desktop-form-wrapper {
+    display: none;
+  }
+}
+
+@media (min-device-width: 1030px) {
+
+  #index-logo {
+    display: block;
+  }
+
+  #index-try-button {
+    display: block;
+  }
+
+  #index-clock {
+    display: block;
+  }
+
+  #slide-logo {
+    display: none;
+  }
+
+  #slide-try-button {
+    display: none;
+  }
+
+  #slide-clock {
+    display: none;
+  }
+
+  .mobile-form {
+    display: none;
+  }
+
+  .desktop-form-wrapper {
+    display: block;
+  }
+}
+
+@media (max-height: 400px){
+
+  .logo {
+    top: 8px;
+    margin-left: 20%;
+    background-size: 85% 85%
+  }
+
+  .try-button {
+    right: 0;
+    left: 10px;
+    top: 15px;
+    margin-left: 0;
+    font-size: 21px;
+    width: 235px;
+  }
+
+  .clock {
+    top: 100px;
+    right: 5%;
+    width: 80px;
+    height: 80px;
+  }
+  .clock .done {
+    background-size: 80px 80px;
+  }
+
+  .clock .second {
+    &:before {
+      height: 23px;
+    }
+  }
+
+  .hey-do-you h1 {
+    font-size: 35px;
+    margin-top: -40px;
+  }
+
+  .running-challenge h1 {
+    font-size: 35px;
+    margin-top: -43px;
+    top: 40%;
+  }
+
+  .go-out h2 {
+    font-size: 35px;
+  }
+
+  button[type=submit] {
+    display: inline-block;
+    width: 90%;
+  }
+
+  .do-a-little h2 {
+    font-size: 35px;
+  }
+
+  .as-little-as h2 {
+    font-size: 35px;
+    margin-top: -70px;
+  }
+
+  .increase-the-amount h3 {
+    font-size: 30px;
+    margin-top: -28px;
+
+  }
+  .increase-the-amount .chart {
+    top: 73%;
+    background-size: 40% 40%;
+    margin-left: -97px;
+  }
+
+  #index-logo {
+    display: none;
+  }
+
+  #index-try-button {
+    display: none;
+  }
+
+  #index-clock {
+    display: none;
+  }
+
+  #slide-logo {
+    display: block;
+    margin-left: initial;
+    left: initial;
+    right: -20px;
+  }
+
+  #slide-try-button {
+    display: block;
+  }
+
+  #slide-clock {
+    display: block;
+  }
+
+
+
+}
