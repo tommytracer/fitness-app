@@ -10,7 +10,7 @@ angular.module('myApp')
   .controller('ThanksCtrl', function ($scope, $timeout) {
 
 
-    $scope.$parent.showTryButton = false;
-    $scope.$parent.hideClock = true;
+    $scope.showTryButton = false;
+    $scope.hideClock = true;
 
   });

@@ -63,7 +63,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', [
     'build',
     'publish',
-    'clean:build'
+    'watch'
   ]);
 
   // Distribution build task

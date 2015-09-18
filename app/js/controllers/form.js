@@ -6,7 +6,7 @@ angular.module('myApp')
     $scope.emailButtonText = 'Sign me up';
     $scope.requiredGender = $scope.requiredAge = $scope.requiredDescribe = '';
     $scope.genderState = $scope.ageState = $scope.describeState = '';
-    $scope.$parent.showTryButton = false;
+    $scope.showTryButton = false;
     $scope.showAppGroup = false;
     $scope.showEmailGroup = false;
     $scope.showFormGroup = false;

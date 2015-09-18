@@ -11,8 +11,8 @@ angular.module('myApp')
 
     $scope.confirmed = 'loading';
 
-    $scope.$parent.showTryButton = false;
-    $scope.$parent.hideClock = true;
+    $scope.showTryButton = false;
+    $scope.hideClock = true;
 
     if($routeParams.id) {
       Parse.Cloud.run('unsubscribe', {
